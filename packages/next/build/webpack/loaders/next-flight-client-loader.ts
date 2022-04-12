@@ -163,7 +163,7 @@ export default async function transformSource(
       '{ $$typeof: MODULE_REFERENCE, filepath: ' +
       JSON.stringify(resourcePath) +
       ', name: ' +
-      JSON.stringify(name) +
+      JSON.stringify(name === 'default' ? '' : name) +
       ' };\n'
     res[name] = moduleRef
     return res
